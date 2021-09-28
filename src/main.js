@@ -1,5 +1,6 @@
 import Vue from 'vue'
-import app from './app.vue'
+import App from './app.vue'
+import './assets/styles/global.scss'
 
 new Vue({
   el: '#app',

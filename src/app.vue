@@ -1,5 +1,6 @@
 <template>
   <div id="app">
-    app
+    <div class="girl"></div>
+    <div class="smile"></div>
   </div>
 </template>
