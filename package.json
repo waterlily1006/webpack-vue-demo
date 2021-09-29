@@ -1,7 +1,7 @@
 {
   "name": "my-webpack-vue-project",
   "version": "1.0.0",
-  "description": "使用 Vue2.x + webpack4.x 搭建项目框架",
+  "description": "使用 Vue2.x + webpack5.x 搭建项目框架",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
