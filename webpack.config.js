@@ -1,6 +1,7 @@
 const path = require('path')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
   mode: 'development',
@@ -9,6 +10,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'dist'), // 所有的文件都输出到dist/目录下
     filename: 'bundle.[hash:8].js', // 输出文件的名称加上hash值
+    clean: true,
   },
   module: {
     rules: [
@@ -46,9 +48,11 @@ module.exports = {
   plugins: [
     new VueLoaderPlugin(), // 最新版的vue-loader需要配置插件
     new HtmlWebpackPlugin({
+      title: 'Webpack 5',
       filename: 'index.html', // 生成的文件名称
       template: 'index.html', // 指定用index.html做模版
       inject: 'body', // 指定插入的<script>标签在body底部
     }),
+    new CleanWebpackPlugin(),
   ],
 }
